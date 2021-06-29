@@ -8,24 +8,28 @@ public class ballon_Controller : MonoBehaviour
     public Rigidbody propphys;
     public float jumpheight;
     private Vector3 direction;
+    float x = (float)-5.8, y = (float)1.7, z = 0, z_trans = 0, z_t = 0; // position de ballon (x ,y, z)
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetKey("k"))
         {
-            propphys.AddForce(Vector3.up * jumpheight, ForceMode.VelocityChange);
-
+            z_t = (float)0.0225;
         }
+        z_trans += z_t;
+        if (z_trans >= 1)
+            z = 10;
+      
+        direction = new Vector3(Input.GetAxis("Horizontal"), 0, z);
     }
     private void FixedUpdate()
     {
