@@ -20,14 +20,21 @@ public class ballon_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // la touche k est taper : le joueur tirera le ballon
         if (Input.GetKey("k"))
         {
-            z_t = (float)0.08;
+            // le joueur se deplace suivant (Oz)
+            z_t = (float)0.03;
         }
+
+        // la position du joueur suivant (Oz)
         z_trans += z_t;
+
+        // le pied du joueur est au côté du ballon
         if (z_trans >= 1)
             z = 10;
       
+        // changer la deriction du ballon
         direction = new Vector3(0, 0, z);
         
     }
