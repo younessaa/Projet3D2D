@@ -7,7 +7,7 @@ public class ballon_Controller : MonoBehaviour
     public float vitesse;
     public Rigidbody propphys;
     private Vector3 direction;
-    float z = 0, z_trans = 0, z_t = 0; // position de ballon (x ,y, z)
+    float z = 0, z_trans = 0, z_t = 0; // z position du ballon suivant oz, z_trans : le deplacement du joueur suivant (oz)
 
 
 
