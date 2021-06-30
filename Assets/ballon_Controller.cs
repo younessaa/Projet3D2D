@@ -6,7 +6,6 @@ public class ballon_Controller : MonoBehaviour
 {
     public float vitesse;
     public Rigidbody propphys;
-    public float jumpheight;
     private Vector3 direction;
     float z = 0, z_trans = 0, z_t = 0; // position de ballon (x ,y, z)
 
@@ -30,11 +29,7 @@ public class ballon_Controller : MonoBehaviour
             z = 10;
       
         direction = new Vector3(0, 0, z);
-        if (Input.GetButtonDown("Jump"))
-        {
-            propphys.AddForce(Vector3.up * jumpheight, ForceMode.VelocityChange);
-
-        }
+        
     }
     private void FixedUpdate()
     {
