@@ -14,13 +14,14 @@ public class animScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool forwardPressed = Input.GetKey("k");
         // si le joueur tape la touche k
-        if (Input.GetKey("k"))
+        if (forwardPressed)
         {
             // alors mettre le boolean isKick a true
             animator.SetBool("isKick", true);
         }
-        if (!Input.GetKey("k"))
+        if (!forwardPressed)
         {
             // alors mettre le boolean isKick a true
             animator.SetBool("isKick", false);
