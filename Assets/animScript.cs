@@ -14,6 +14,7 @@ public class animScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // forwardPressed prend l'etat de la touche k, true si la touche est enfonce et false sinon
         bool forwardPressed = Input.GetKey("k");
         // si le joueur tape la touche k
         if (forwardPressed)
@@ -23,7 +24,7 @@ public class animScript : MonoBehaviour
         }
         if (!forwardPressed)
         {
-            // alors mettre le boolean isKick a true
+            // alors mettre le boolean isKick a false
             animator.SetBool("isKick", false);
         }
     }
